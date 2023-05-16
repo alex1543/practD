@@ -30,6 +30,7 @@ void hello(HTTPServerRequest req, HTTPServerResponse res)
 		{
 			if ((indexOf(line, "@tr")==-1) && (indexOf(line, "@ver")==-1)) line_all ~= line;
 			if (indexOf(line, "@tr")!=-1) line_all ~= viewSelect();
+			if (indexOf(line, "@ver")!=-1) line_all ~= viewVer();
 		}
 	}
 	catch (ErrnoException ex)
@@ -43,9 +44,8 @@ void hello(HTTPServerRequest req, HTTPServerResponse res)
 
 string viewSelect() {
 	writeln("Getting data from MySQL ...");
-	
 
-/*	auto mysql = new MySql("localhost", "root", "", "test");
+	/*	auto mysql = new MySql("localhost", "root", "", "test");
 
 	foreach(row; mysql.query("SELECT * FROM myarttable")) {
 		writefln("%s %s %s %s", row["id"], row[0], row[1], row[2]);
@@ -53,6 +53,10 @@ string viewSelect() {
 	*/
 	
 	string content = readText("db.inc");
-	
+	return content;
+}
+
+string viewVer() {
+	string content = readText("ver.inc");
 	return content;
 }

@@ -3,12 +3,16 @@ import arsd.mysql;
 
 void main()
 {
-	//writeln("Unloading from MySQL works.");
-	//writeln("[SELECT * FROM myarttable]");
+	// подпрограмма (скрипт) для работы с MySQL.
 	
 	auto mysql = new MySql("localhost", "root", "", "test");
 
-	foreach(row; mysql.query("SELECT * FROM myarttable")) {
+	// получение заголовка.
+	writefln("<tr>");
+	foreach(row; mysql.query("SHOW COLUMNS FROM myarttable")) writefln("<td> %s </td>", row[0]);
+	writefln("</tr>");
+	// строки для таблицы.
+	foreach(row; mysql.query("SELECT * FROM myarttable WHERE id>14 ORDER BY id DESC")) 
 		writefln("<tr><td> %s </td><td> %s </td><td> %s </td><td> %s </td></tr>", row[0], row[1], row[2], row[3]);
-	}
+
 }
