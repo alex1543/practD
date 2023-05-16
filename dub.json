@@ -1,0 +1,12 @@
+{
+	"authors": [
+		"Alexey Subbotin"
+	],
+	"copyright": "Copyright © 2023, Alexey Subbotin",
+	"dependencies": {
+		"vibe-d": "~>0.9"
+	},
+	"description": "A simple vibe.d server application.",
+	"license": "proprietary",
+	"name": "app"
+}

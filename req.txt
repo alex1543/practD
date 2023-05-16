@@ -1,0 +1,6 @@
+
+
+Пример будет гарантированно работать:
+1) установить язык D (Dlang) из dmd-2.103.1.exe с сайта: https://dlang.org/ в каталог C:\D\
+2) распаковать архив mysql-5.7.41-win32.zip с сайта: https://downloads.mysql.com/archives/community/ и все файлы из подкаталога mysql-5.0.15-win32\lib\opt\ в архиве перенести в каталог с примером.
+3) распаковать весь репозиторий https://github.com/adamdruppe/arsd в каталог C:\D\dmd2\src\phobos\arsd\
