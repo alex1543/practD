@@ -3,7 +3,7 @@
 
 Внешний вид окна в браузере:
 
-![image](https://github.com/alex1543/practD/assets/10297748/8d555ff5-ed67-4abd-b5ab-a479446d2e20)
+![image](https://github.com/alex1543/practD/assets/10297748/ed176704-e384-47fe-a9b4-9b5e0bc43cb1)
 
 Пример не требует web-сервера Apache. Достаточно запустить файл build.bat
 
