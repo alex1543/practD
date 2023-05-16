@@ -3,6 +3,7 @@ import vibe.vibe;
 import std.exception;
 import std.stdio;
 import std.file;
+import std.process;
 
 // import arsd.mysql;
 
@@ -45,6 +46,10 @@ void hello(HTTPServerRequest req, HTTPServerResponse res)
 string viewSelect() {
 	writeln("Getting data from MySQL ...");
 
+	auto rdmd = execute(["rdmd", "db.d"]);
+	return rdmd.output;
+
+
 	/*	auto mysql = new MySql("localhost", "root", "", "test");
 
 	foreach(row; mysql.query("SELECT * FROM myarttable")) {
@@ -52,11 +57,14 @@ string viewSelect() {
 	}
 	*/
 	
-	string content = readText("db.inc");
-	return content;
+//	string content = readText("db.inc");
+//	return content;
 }
 
 string viewVer() {
-	string content = readText("ver.inc");
-	return content;
+	auto rdmd = execute(["rdmd", "ver.d"]);
+	return rdmd.output;
+
+//	string content = readText("ver.inc");
+//	return content;
 }
