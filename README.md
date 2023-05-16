@@ -1,6 +1,6 @@
 # practD
 Как можно работать с таблицами в MySQL на языке D (D lang)
-
+Для работы с базой данных (таблица test в MySQL), необходимо экспортировать структуру из import_test.sql
 Внешний вид окна в браузере:
 
 ![image](https://github.com/alex1543/practD/assets/10297748/ed176704-e384-47fe-a9b4-9b5e0bc43cb1)
